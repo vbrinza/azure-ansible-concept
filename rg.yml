@@ -17,6 +17,11 @@
       name: mySubnet
       address_prefix: "10.0.1.0/24"
       virtual_network: myVnet
+      service_endpoints:
+        - service: Microsoft.Storage
+        - service: Microsoft.Sql
+        - service: Microsoft.KeyVault
+      
 
   - name: Create public IP address
     azure_rm_publicipaddress:
